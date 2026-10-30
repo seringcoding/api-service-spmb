@@ -1,0 +1,111 @@
+info:
+  name: pendaftaran
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/pendaftaran
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Accept
+      value: application/json
+  body:
+    type: json
+    data: |
+
+      {
+        "client_submission_id": "9d72b456-20c8-4e5f-a123-123456789abc",
+        "biodata": {
+          "namaLengkap": "Santoso",
+          "nik": "3674011506080002",
+          "kk": "3674010101010002",
+          "jenisKelamin": "L",
+          "tanggalLahir": "2008-06-15",
+          "tempatLahir": "Tangerang",
+          "nomorTelepon": "081234567890",
+          "provinsi": "Banten",
+          "kabupatenKota": "KOTA TANGERANG",
+          "kecamatan": "TANGERANG",
+          "kelurahan": "SUKASARI",
+          "alamat": "Jl. Contoh No. 10, Tangerang",
+          "nisn": "0081234567",
+          "kabupatenSekolah": "KOTA TANGERANG",
+          "asalSekolah": {
+            "id": 1
+          }
+        },
+        "data_orang_tua": {
+          "nama_ayah": "Andi Santoso",
+          "nik_ayah": "3674010101700001",
+          "pekerjaan_ayah": "Wiraswasta",
+          "pendidikan_ayah": "SMA",
+          "penghasilan_ayah": "3000000",
+          "status_ayah" : "Kandung",
+          "tahun_lahir_ayah" : "1992",
+          "nomor_telepon_ayah": "081234567891",
+          "nama_ibu": "Siti Aminah",
+          "nik_ibu": "3674014101750002",
+          "pekerjaan_ibu": "Ibu Rumah Tangga",
+          "pendidikan_ibu": "SMA",
+          "penghasilan_ibu": "0",
+          "status_ibu" : "Kandung",
+          "tahun_lahir_ibu" : "1992",
+          "nomor_telepon_ibu": "081234567892",
+          "alamat_orang_tua": "Jl. Contoh No. 10, Tangerang"
+        },
+        "data_periodik": {
+          "tinggi_badan": 165,
+          "berat_badan": 55,
+          "jarak_tempuh": 5,
+          "waktu_tempuh": 20,
+          "jumlah_saudara_kandung": 2
+        },
+        "nilai_raport": {
+          "semester_1": {
+            "bahasa_indonesia": 85,
+            "matematika": 88,
+            "bahasa_inggris": 86,
+            "ipa": 84,
+            "ips": 87
+          },
+          "semester_2": {
+            "bahasa_indonesia": 87,
+            "matematika": 89,
+            "bahasa_inggris": 88,
+            "ipa": 86,
+            "ips": 88
+          },
+          "semester_3": {
+            "bahasa_indonesia": 88,
+            "matematika": 90,
+            "bahasa_inggris": 89,
+            "ipa": 87,
+            "ips": 89
+          },
+          "semester_4": {
+            "bahasa_indonesia": 89,
+            "matematika": 91,
+            "bahasa_inggris": 90,
+            "ipa": 88,
+            "ips": 90
+          },
+          "semester_5": {
+            "bahasa_indonesia": 90,
+            "matematika": 92,
+            "bahasa_inggris": 91,
+            "ipa": 89,
+            "ips": 91
+          }
+        }
+      }
+  auth:
+    type: bearer
+    token: 1|FM13cvH5Ggy2zkgQWD5GirwyMTyZerV2C5FzI3l34fdecd25
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
